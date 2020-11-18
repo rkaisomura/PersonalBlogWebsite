@@ -1,0 +1,236 @@
+
+  ul{
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: gray;
+  }
+
+  h1, h3{
+    font-family: 'Lucida Sans', sans-serif;
+    color: blueviolet;
+    text-align: center;
+  }
+
+  p{
+    font-family: 'Lucida Sans', sans-serif;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  img{
+      border: none;
+      border-radius: 10%;
+  }
+
+.container {
+    border: solid red;
+    display: grid;
+    grid-template-rows: 100px 350px 700px 350px 400px 100px;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "nav"
+    "welcome"
+    "post"
+    "about"
+    "contact"
+    "ft";
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: gray;
+  }
+
+/* Navigation Style*/
+.nav{
+    grid-area: nav;
+    background: white;
+    padding: 0 32px;
+ }
+  
+.nav-menu{
+    justify-content: space-between;
+}
+  
+.nav-items{
+    display: flex;
+    margin: 0;
+}
+  
+.nav-link{
+    padding: 24px 14px;
+    font-size: 16px;
+    position: relative;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 16px;
+}
+  
+.nav-link:hover{
+    background-color: blueviolet;
+}
+  
+.nav-link:hover a{   
+    color: white;
+}
+  
+.nav-brand a {
+    padding: 16px 0;
+    display: block;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 35px;
+    color: blueviolet;
+}
+
+/* Welcome style*/
+.welcome {
+    grid-area: welcome;
+    text-align: center;
+}
+
+/* Post Style */
+.post {
+    grid-area: post;
+    width: 100%;
+    height: 100%;
+    background-color: #edf2f4;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container > div {
+    background-color: black;
+    color: white;
+    width: 400px;
+    height: 550px;
+    margin: 10px 10px;
+    text-align: center;
+    border-radius: 10%;
+  }
+  
+  .flex-container > div:hover{
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.19);
+  }
+
+  .btn-readmore{
+    border: none;
+    border-radius: 32px;
+    padding: 16px 48px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', sans-serif;
+    color: #a967e0;
+    cursor: pointer;  
+    outline: none;
+  }
+
+  .btn-readmore:hover{
+      color: black;
+  }
+
+  /* About Style */
+.about {
+    grid-area: about;
+    background: #bfc0c0;
+    width: 100%;
+    height: 100%;
+}
+ 
+ .about-content{
+   margin: 30px;
+ }
+ 
+ .about-content-flex{
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .img-profile{
+   border: none;
+   border-radius: 100%;
+   display: block;
+   margin-top: -10%;
+   margin-left: 20%;
+ }
+ 
+ .parag{
+   display: block;
+   margin-left: 45%;
+   margin-top: -15%;
+   text-align: center;
+   width: 200px;
+ }
+
+/* Contact Style */
+.contact {
+    grid-area: contact;
+}
+
+.form-contact {
+
+}
+
+/* Footer Style*/
+
+.footer {
+    grid-area: ft;
+}
+
+
+
+
+/* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
+    .container {
+        border: solid red;
+        display: grid;
+        grid-template-rows: 100px 350px 700px 350px 400px 100px;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "nav nav nav nav"
+        "post post post"
+        "about about about"
+        "contact contact contact"
+        "ft ft ft";
+    }
+  }
+  
+  /* Large Screens */
+  @media (min-width:901px) {
+    .container {
+        border: solid red;
+        display: grid;
+        grid-template-rows: 100px 350px 700px 350px 400px 100px;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "nav nav nav nav nav nav"
+        "welcome welcome welcome welcome welcome welcome"
+        "post post post post post post"
+        "about about about about about about"
+        "contact contact contact contact contact contact"
+        "ft ft ft ft ft ft";
+    }
+
+    .about-content flex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img-profile{
+        border: none;
+        border-radius: 100%;
+        justify-content: center;
+        margin-top: 5px;
+    }
+      
+    .parag{
+        justify-content: center;
+        width: 500px;
+    }
+  }

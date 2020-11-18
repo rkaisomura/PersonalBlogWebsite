@@ -7,23 +7,98 @@
     <title>Personal Blog Website</title>
 </head>
 <body>
-    <!--Navigation bar-->
-    <nav>
+    <div id="container" class="container">
+        <!--Navigation bar-->
+        <nav class="nav">
+            <div class="nav-menu flex-row">
+                <div class="nav-brand">
+                    <a href="#" class="text-gray">Personal Blog</a>
+                </div>
+                <div>
+                  <ul class="nav-items">
+                    <li class="nav-link">
+                      <a href="#home">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#post">Posts</a>
+                      </li>
+                    <li class="nav-link">
+                      <a href="#about">About me</a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                 </div>
+            </div>
+        </nav>
+        <!--Welcome section-->
+        <section class="welcome">
+            <img src="./img/welcome.jpg" alt="Welcome" width="1000" height="200">
+            <h1>to my blog</h1>
+        </section>
+        
+        <!--Posts section-->
+        <section id="post" class="post">
+            <h1>Recent Posts</h1>
+            <div class="flex-container">
+                <div id="project-card" class="post-card">
+                    <img src="./img/project.jpg" alt="Project post" width="400" height="267">
+                    <h3>Post title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Numquam velit at eos nihil omnis laborum. Non vitae autem deserunt ullam.</p>
+                    <span>Date: Nov, 15 2020</span><br><br>
+                    <input type=button onclick="location.href = 'blog-post.html'"  value='Read more' id="readmore" class="btn-readmore">
+                </div>
+                <div id="development-card" class="post-card">
+                    <img src="./img/development.jpg" alt="Development post" width="400">
+                    <h3>Post title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Numquam velit at eos nihil omnis laborum. Non vitae autem deserunt ullam.</p>
+                    <span>Date: Nov, 10 2020</span><br><br>
+                    <input type=button onclick="location.href = 'blog-post.html'"  value='Read more' id="readmore" class="btn-readmore">
+                </div>
+                <div id="agile-card" class="post-card">
+                    <img src="./img/agile.jpg" alt="Agile post" width="400">
+                    <h3>Post title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Numquam velit at eos nihil omnis laborum. Non vitae autem deserunt ullam.</p>
+                    <span>Date: Nov, 01 2020</span><br><br>
+                    <input type=button onclick="location.href = 'blog-post.html'"  value='Read more' id="readmore" class="btn-readmore">
+                </div>
+            </div>
+        </section>
 
-    </nav>
-    
-    <!--Posts section-->
-    
+        <!--About me section-->
+        <section id="about" class="about">
+            <h1>About me</h1>
+            <div class="about-content-flex">
+                <img class="img-profile" src="./img/profile.jpg" alt="photo profile"><br><br>
+                <div class="parag">
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam odio doloribus, dolorem repellat illo saepe? Dolores nostrum eum laboriosam corporis harum, distinctio ad, cumque beatae deleniti repellendus minima. Veritatis, voluptates! Voluptatum quo tenetur enim ab laudantium, quae optio sint!</p>
+                </div>
+            </div>
+        </section>
 
-    <!--About me section-->
+        <!--Contact me by form section-->
+        <section id="contact" class="contact">
+            <h1>Contact</h1>
+            <form class="form-contact">
+                <label for="fullname">Name: </label>
+                <input type="text" id="name" name="fullname"><br>
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email"><br>
+                <label for="message">Message: </label>
+                <input type="text" id="message" name="message"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <!--Footer section-->
+        <footer>
 
-
-    <!--Contact me by form section-->
-
-    <!--Footer section-->
-    <footer>
-
-    </footer>
+        </footer>
+    </div>
+   
 
 
 </body>
