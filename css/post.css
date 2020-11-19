@@ -1,0 +1,191 @@
+@import "style.css";
+
+
+
+.container {
+    border: solid red;
+    display: grid;
+    grid-template-rows: 100px 750px 400px 100px;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "nav"
+    "post"
+    "author"
+    "ft";
+}
+
+
+
+.nav-brand a {
+    padding: 16px 0;
+    display: block;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 25px;
+    color: blueviolet;
+}
+
+.nav-items{
+    display:none;
+}
+
+/* Post Style */
+.post{
+    grid-area: post;
+    border: solid blue;
+}
+
+#img-post{
+    width: 100%;
+}
+
+.post-box{
+    width: 345px;
+    height: 500px;
+    overflow: scroll;
+    border: solid green;
+}
+
+.post-flex > h1{
+    font-style: italic;
+    font-size: 30px;
+}
+
+.date-post
+
+#post-p{
+    text-align: justify;
+}
+
+/* Author style */
+.author{
+    grid-area: author;
+    border: solid red;
+}
+
+/* Footer Style*/
+
+.footer {
+    grid-area: ft;
+    background: blueviolet;
+}
+
+#footer-grid{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+}
+
+.footer-box{
+    height: 43px;
+    width: 173px;
+}
+
+.footer-box > h3{
+    color: black;
+}
+
+#copyright{
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 13px;
+    text-align: end;
+    margin-top: 10%;
+}
+
+#follow{
+    text-align: center;
+}
+
+#follow > a{
+    color: black;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#follow > a:hover{
+    color: white;
+}
+
+#arrow-up > a{
+    color: black;
+    margin-left: 50%;
+    margin-top: 15%;
+    font-size: 30px;
+}
+
+#arrow-up > a:hover{
+    color: white;
+}
+
+ /* Large Screens */
+ @media (min-width:901px) {
+    .container {
+        border: solid red;
+        display: grid;
+        grid-template-rows: 100px 350px 650px 350px 400px 100px;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "nav nav nav nav nav nav"
+        "welcome welcome welcome welcome welcome welcome"
+        "post post post post post post"
+        "about about about about about about"
+        "contact contact contact contact contact contact"
+        "ft ft ft ft ft ft";
+    }
+
+    /* Navigation Style*/
+    .nav{
+        grid-area: nav;
+        background: white;
+        padding: 0 32px;
+    }
+
+    .nav-menu{
+        justify-content: space-between;
+    }
+
+    .nav-items{
+        display: flex;
+        margin: 0;
+    }
+
+    .nav-link{
+        padding: 24px 14px;
+        font-size: 16px;
+        position: relative;
+        font-family: 'Lucida Sans', sans-serif;
+        font-size: 16px;
+    }
+
+    .nav-link:hover{
+        background-color: blueviolet;
+    }
+
+    .nav-link:hover a{   
+        color: white;
+    }
+
+    .nav-brand a {
+        padding: 16px 0;
+        font-size: 30px;
+    }
+ 
+    /* Footer Style */       
+    #copyright{
+        margin-left: 76%;
+        margin-top: 20px;
+    }
+    
+    #follow > a{
+        font-size: 30px;
+    }
+
+    #follow > a:hover{
+        color: white;
+    }
+    
+    #arrow-up > a{
+        margin-left: 20%;
+        margin-top: 15%;
+        font-size: 50px;
+    }
+}
