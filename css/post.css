@@ -1,27 +1,16 @@
 @import "style.css";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
-
-
-.container {
-    border: solid red;
+.container-post {
+    border: solid gray;
     display: grid;
-    grid-template-rows: 100px 750px 400px 100px;
+    grid-template-rows: 100px 750px 500px 100px;
     grid-template-columns: 100%;
     grid-template-areas: 
     "nav"
     "post"
     "author"
     "ft";
-}
-
-
-
-.nav-brand a {
-    padding: 16px 0;
-    display: block;
-    font-family: 'Lucida Sans', sans-serif;
-    font-size: 25px;
-    color: blueviolet;
 }
 
 .nav-items{
@@ -31,7 +20,6 @@
 /* Post Style */
 .post{
     grid-area: post;
-    border: solid blue;
 }
 
 #img-post{
@@ -39,153 +27,174 @@
 }
 
 .post-box{
-    width: 345px;
+    width: 100%;
     height: 500px;
     overflow: scroll;
-    border: solid green;
 }
 
-.post-flex > h1{
+.post-box > h1{
     font-style: italic;
     font-size: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-.date-post
+.date-post{
+    font-weight: bold;
+}
 
 #post-p{
     text-align: justify;
+    line-height: 16px;
+    width: 98%;
 }
 
 /* Author style */
 .author{
     grid-area: author;
-    border: solid red;
+    overflow: scroll;
 }
 
-/* Footer Style*/
-
-.footer {
-    grid-area: ft;
-    background: blueviolet;
+.author-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#footer-grid{
-    display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
+#author-avatar{
+    height: 35%;
+    width: 35%;
+    border: none;
+    border-radius: 50%;
 }
 
-.footer-box{
-    height: 43px;
-    width: 173px;
-}
-
-.footer-box > h3{
-    color: black;
-}
-
-#copyright{
-    font-family: 'Lucida Sans', sans-serif;
-    font-size: 13px;
-    text-align: end;
-    margin-top: 10%;
-}
-
-#follow{
+.author-description{
     text-align: center;
 }
 
-#follow > a{
-    color: black;
-    margin-left: 10px;
+.author-description > h2{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.author-description > h3{
+    color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.author-description > h4{
+    color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.author-description > a{
+    color: blueviolet;
     font-size: 20px;
+    margin-left: 10px;
 }
 
-#follow > a:hover{
-    color: white;
-}
-
-#arrow-up > a{
+.author-description > a:hover{
     color: black;
-    margin-left: 50%;
-    margin-top: 15%;
-    font-size: 30px;
 }
 
-#arrow-up > a:hover{
-    color: white;
+.author-bio{
+    text-align: justify;
+    width: 98%;
 }
 
- /* Large Screens */
- @media (min-width:901px) {
+
+/* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
     .container {
+        display: grid;
+        grid-template-rows: 100px 750px 450px 100px;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "nav nav nav nav"
+        "post post post"
+        "author author author"
+        "ft ft ft";
+    }
+
+    .author-flex{
+        margin-left: 20%;
+        margin-top: -3%;
+    }
+
+    #author-avatar{
+        margin-top: -5%;
+        margin-right: 2%;
+    }
+
+}
+
+
+
+/* Large Screens */
+@media (min-width:901px) {
+    .container-post {
         border: solid red;
         display: grid;
-        grid-template-rows: 100px 350px 650px 350px 400px 100px;
+        grid-template-rows: 100px 900px 350px 100px;
         grid-template-columns: 100%;
         grid-template-areas: 
         "nav nav nav nav nav nav"
-        "welcome welcome welcome welcome welcome welcome"
         "post post post post post post"
-        "about about about about about about"
-        "contact contact contact contact contact contact"
+        "author author author author author author"
         "ft ft ft ft ft ft";
     }
 
     /* Navigation Style*/
-    .nav{
-        grid-area: nav;
-        background: white;
-        padding: 0 32px;
-    }
-
-    .nav-menu{
-        justify-content: space-between;
-    }
-
     .nav-items{
         display: flex;
         margin: 0;
     }
 
-    .nav-link{
-        padding: 24px 14px;
-        font-size: 16px;
-        position: relative;
-        font-family: 'Lucida Sans', sans-serif;
-        font-size: 16px;
+    #img-post{
+        width: 50%;
+        margin-left: 25%;
     }
 
-    .nav-link:hover{
-        background-color: blueviolet;
+    .post-box{
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
     }
 
-    .nav-link:hover a{   
-        color: white;
+    .author{
+        align-items: center;
+        overflow: hidden;
     }
 
-    .nav-brand a {
-        padding: 16px 0;
-        font-size: 30px;
-    }
- 
-    /* Footer Style */       
-    #copyright{
-        margin-left: 76%;
-        margin-top: 20px;
-    }
-    
-    #follow > a{
-        font-size: 30px;
-    }
-
-    #follow > a:hover{
-        color: white;
-    }
-    
-    #arrow-up > a{
+    .author-flex{
+        display: flex;
+        flex-direction: row;
         margin-left: 20%;
-        margin-top: 15%;
-        font-size: 50px;
+        margin-top: -3%;
+    }
+
+    #author-avatar{
+        margin-top: -5%;
+        margin-right: 2%;
+    }
+
+    .author-description > h2, h3, h4{
+        text-align: left;
+    }
+
+    .author-description > h2{
+        margin-top: 100px;
+    }
+    
+    .author-description{
+        text-align: justify;
+    }
+
+    .author-bio{
+        width: 80%;
     }
 }

@@ -8,7 +8,7 @@
     color: gray;
   }
 
-  h1, h3{
+  h1, h3, h4{
     font-family: 'Lucida Sans', sans-serif;
     color: blueviolet;
     text-align: center;
@@ -26,7 +26,6 @@
   }
 
 .container {
-    border: solid red;
     display: grid;
     grid-template-rows: 100px 200px 1300px 350px 400px 100px;
     grid-template-columns: 100%;
@@ -197,7 +196,7 @@
 
 .footer-box{
     height: 43px;
-    width: 173px;
+    width: 200px;
 }
 
 .footer-box > h3{
@@ -207,8 +206,8 @@
 #copyright{
     font-family: 'Lucida Sans', sans-serif;
     font-size: 13px;
-    text-align: end;
-    margin-top: 10%;
+    margin-top: 14%;
+    text-align: right;
 }
 
 #follow{
@@ -241,9 +240,8 @@
 /* Medium Screens */
 @media (min-width: 600px) and (max-width:900px) {
     .container {
-        border: solid red;
         display: grid;
-        grid-template-rows: 100px 350px 700px 350px 400px 100px;
+        grid-template-rows: 100px 250px 1250px 350px 450px 100px;
         grid-template-columns: 100%;
         grid-template-areas: 
         "nav nav nav nav"
@@ -252,12 +250,44 @@
         "contact contact contact"
         "ft ft ft";
     }
+
+    #img-profile{
+        width: 150px;
+        height: 150px;
+        margin-top: -0.3%;
+        margin-left: 30%;
+    }
+
+    .form-contact {
+        margin-left: 15%;
+    }
+
+    #name{
+        width: 448px;
+    }
+
+    #email{
+        width: 450px;
+    }
+
+    textarea{
+        width: 500px;
+        height: 150px;
+    }
+    
+    .btn-submit{
+        margin-top: 10px;
+        margin-left: 25%;
+    }
+
+    #copyright{
+        margin-top: 3%;
+    }
   }
   
   /* Large Screens */
   @media (min-width:901px) {
     .container {
-        border: solid red;
         display: grid;
         grid-template-rows: 100px 350px 650px 350px 400px 100px;
         grid-template-columns: 100%;
@@ -275,6 +305,7 @@
         flex-direction: row;
     }
 
+    
     /* Navigation Style*/
     .nav{
         grid-area: nav;
@@ -390,8 +421,8 @@
 
     /* Footer Style */       
     #copyright{
-        margin-left: 76%;
-        margin-top: 20px;
+        font-weight: bold;
+        margin-top: 3%;
     }
     
     #follow > a{
