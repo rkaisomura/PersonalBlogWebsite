@@ -39,10 +39,10 @@
             </div>
         </nav>
         <!--Welcome section-->
-        <section class="welcome">
+        <header class="welcome">
             <img id="welcome-img" src="./img/welcome.jpg" alt="Welcome">
             <h1>to my blog</h1>
-        </section>
+        </header>
         
         <!--Posts section-->
         <section id="post" class="post">
@@ -86,16 +86,16 @@
             </div>
         </section>
 
-        <!--Contact me by form section-->
+        <!--Contact me and subscribe by form section-->
         <section id="contact" class="contact">
             <h1>Contact me and Subscribe</h1>
             <form class="form-contact">
-                <label class="text-form" for="fullname">Name: </label>
-                <input type="text" id="name" name="fullname"><br><br>
-                <label class="text-form" for="email">Email: </label>
-                <input type="text" id="email" name="email"><br><br>
+                <label class="text-form" for="fullname">* Name: </label><br>
+                <input type="text" id="name" name="fullname"  placeholder="Write your lovely name" required><br><br>
+                <label class="text-form" for="email">* Email: </label><br>
+                <input type="email" id="email" name="email"  placeholder="Email address please" required><br><br>
                 <label class="text-form" for="message">Message: </label><br>
-                <textarea id="message" name="message" rows="8" cols="28"></textarea><br>
+                <textarea id="message" name="message"></textarea><br>
                 <input class="btn-button btn-submit" type="submit" value="Subscribe">
             </form>
         </section>
@@ -109,9 +109,9 @@
                     <a href="#" class="fa fa-youtube"></a>
                     <a href="#" class="fa fa-instagram"></a>
                 </div>
-                <div id="arrow-up" class="footer-box">
+                <div id="arrow-up">
                     <a href="#nav" class="fa fa-arrow-circle-up"></a>
-                </div><br>
+                </div>
                 <div id="copyright">Copyright&#169;2020<br>created by Erika Hirata</div>
             </div>
         </footer>

@@ -2,9 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 .container-post {
-    border: solid gray;
     display: grid;
-    grid-template-rows: 100px 750px 500px 100px;
+    grid-template-rows: 100px 900px 600px 100px;
     grid-template-columns: 100%;
     grid-template-areas: 
     "nav"
@@ -20,14 +19,19 @@
 /* Post Style */
 .post{
     grid-area: post;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #img-post{
     width: 100%;
+    border-radius: 0;
 }
 
 .post-box{
-    width: 100%;
+    width: 80%;
     height: 500px;
     overflow: scroll;
 }
@@ -59,6 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 #author-avatar{
@@ -103,8 +108,10 @@
 
 .author-bio{
     text-align: justify;
-    width: 98%;
+    width: 80%;
+    margin-left: 10%;
 }
+
 
 
 /* Medium Screens */
@@ -114,38 +121,25 @@
         grid-template-rows: 100px 750px 450px 100px;
         grid-template-columns: 100%;
         grid-template-areas: 
-        "nav nav nav nav"
-        "post post post"
-        "author author author"
-        "ft ft ft";
+        "nav"
+        "post"
+        "author"
+        "ft";
     }
-
-    .author-flex{
-        margin-left: 20%;
-        margin-top: -3%;
-    }
-
-    #author-avatar{
-        margin-top: -5%;
-        margin-right: 2%;
-    }
-
 }
-
 
 
 /* Large Screens */
 @media (min-width:901px) {
     .container-post {
-        border: solid red;
         display: grid;
-        grid-template-rows: 100px 900px 350px 100px;
+        grid-template-rows: 100px 900px 450px 100px;
         grid-template-columns: 100%;
         grid-template-areas: 
-        "nav nav nav nav nav nav"
-        "post post post post post post"
-        "author author author author author author"
-        "ft ft ft ft ft ft";
+        "nav"
+        "post"
+        "author"
+        "ft";
     }
 
     /* Navigation Style*/
@@ -155,12 +149,12 @@
     }
 
     #img-post{
+        margin-bottom: 20px;
         width: 50%;
-        margin-left: 25%;
     }
 
     .post-box{
-        width: 100%;
+        width: 80%;
         height: 70%;
         overflow: hidden;
     }
@@ -196,5 +190,11 @@
 
     .author-bio{
         width: 80%;
+        margin-left: 0;
     }
+
+    #follow > h3{
+        text-align: center;
+    }
+
 }

@@ -1,29 +1,29 @@
 
-  ul{
+ul{
     list-style-type: none;
-  }
+}
 
-  a {
+a {
     text-decoration: none;
     color: gray;
-  }
+}
 
-  h1, h3, h4{
+h1, h3, h4{
     font-family: 'Lucida Sans', sans-serif;
     color: blueviolet;
     text-align: center;
-  }
+}
 
-  p{
+p{
     font-family: 'Lucida Sans', sans-serif;
     text-align: center;
     font-size: 15px;
-  }
+}
 
-  img{
+img{
       border: none;
       border-radius: 10%;
-  }
+}
 
 .container {
     display: grid;
@@ -84,7 +84,6 @@
     grid-area: post;
     width: 100%;
     height: 100%;
-    background-color: #edf2f4;
 }
 
 .flex-container {
@@ -123,7 +122,7 @@
     font-size: 12px;
 }
 
- .btn-readmore:hover{
+.btn-readmore:hover{
     color: black;
 }
 
@@ -165,20 +164,38 @@
 .contact {
     grid-area: contact;
     background: #edf2f4;
-    align-items: center;
 }
 
 .form-contact {
-    margin-left: 18%;
+    margin-left: 25%;
+    max-width: 500px;
+    height: 500px;
 }
 
 .text-form{
     font-family: 'Lucida Sans', sans-serif;
 }
 
+#name{
+    width: 200px;
+}
+
+#email{
+    width: 200px;
+}
+
+textarea{
+    width: 200px;
+    height: 150px;
+}
+
 .btn-submit{
-    margin-left: 13%;
+    margin-left: 5%;
     border: solid grey;
+}
+
+.btn-submit:hover{
+    color: black;
 }
 
 /* Footer Style*/
@@ -186,17 +203,18 @@
 .footer {
     grid-area: ft;
     background: blueviolet;
+    position: relative;
 }
 
 #footer-grid{
     display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr 1fr;
+    
 }
 
 .footer-box{
     height: 43px;
-    width: 200px;
+    width: 100%;
 }
 
 .footer-box > h3{
@@ -206,8 +224,10 @@
 #copyright{
     font-family: 'Lucida Sans', sans-serif;
     font-size: 13px;
-    margin-top: 14%;
     text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 #follow{
@@ -226,9 +246,10 @@
 
 #arrow-up > a{
     color: black;
-    margin-left: 50%;
-    margin-top: 15%;
     font-size: 30px;
+    position: absolute;
+    top:40%;
+    left:50%;
 }
 
 #arrow-up > a:hover{
@@ -244,12 +265,13 @@
         grid-template-rows: 100px 250px 1250px 350px 450px 100px;
         grid-template-columns: 100%;
         grid-template-areas: 
-        "nav nav nav nav"
-        "post post post"
-        "about about about"
-        "contact contact contact"
-        "ft ft ft";
-    }
+        "nav"
+        "welcome"
+        "post"
+        "about"
+        "contact"
+        "ft";
+        }
 
     #img-profile{
         width: 150px;
@@ -259,11 +281,11 @@
     }
 
     .form-contact {
-        margin-left: 15%;
+        margin-left: 25%;
     }
 
     #name{
-        width: 448px;
+        width: 450px;
     }
 
     #email{
@@ -271,7 +293,7 @@
     }
 
     textarea{
-        width: 500px;
+        width: 450px;
         height: 150px;
     }
     
@@ -289,15 +311,15 @@
   @media (min-width:901px) {
     .container {
         display: grid;
-        grid-template-rows: 100px 350px 650px 350px 400px 100px;
+        grid-template-rows: 100px 350px 650px 350px 500px 100px;
         grid-template-columns: 100%;
         grid-template-areas: 
-        "nav nav nav nav nav nav"
-        "welcome welcome welcome welcome welcome welcome"
-        "post post post post post post"
-        "about about about about about about"
-        "contact contact contact contact contact contact"
-        "ft ft ft ft ft ft";
+        "nav"
+        "welcome"
+        "post"
+        "about"
+        "contact"
+        "ft";
     }
 
     .about-content flex{
@@ -357,7 +379,7 @@
     .flex-container > div {
         background-color: black;
         color: white;
-        width: 400px;
+        max-width: 400px;
         height: 500px;
         margin: 10px 10px;
         text-align: center;
@@ -369,7 +391,7 @@
     }
 
     #card-img{
-        width: 400px;
+        max-width: 400px;
         height: 250px;
     }
     
@@ -402,7 +424,7 @@
     }
 
     #name{
-        width: 598px;
+        width: 600px;
     }
 
     #email{
@@ -410,19 +432,18 @@
     }
 
     textarea{
-        width: 650px;
+        width: 600px;
         height: 150px;
     }
     
     .btn-submit{
         margin-top: 10px;
-        margin-left: 25%;
+        margin-left: 30%;
     }
 
     /* Footer Style */       
     #copyright{
         font-weight: bold;
-        margin-top: 3%;
     }
     
     #follow > a{
@@ -434,8 +455,7 @@
     }
     
     #arrow-up > a{
-        margin-left: 20%;
-        margin-top: 15%;
         font-size: 50px;
+        top:30%;
     }
   }
